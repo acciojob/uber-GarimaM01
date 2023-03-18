@@ -5,7 +5,6 @@ import java.util.*;
 public class TripBooking {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public int tripBookingId;
-
     public String fromLocation;
     public String toLocation;
     public int distanceInKm;

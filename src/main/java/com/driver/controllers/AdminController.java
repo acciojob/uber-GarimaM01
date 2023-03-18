@@ -14,18 +14,20 @@ import java.util.*;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-@Autowired AdminService adminService;
+	@Autowired AdminService adminService;
+
 	@PostMapping("/register")
-	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){ adminService.adminRegister(admin); return new ResponseEntity<>(HttpStatus.OK);
+	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin) {adminService.adminRegister(admin);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
 	@PutMapping("/update")
-	public ResponseEntity<Admin> updateAdminPassword(@RequestParam Integer adminId, @RequestParam String password){
+	public ResponseEntity<Admin> updateAdminPassword(@RequestParam Integer adminId, @RequestParam String password) {
 		return new ResponseEntity<>(adminService.updatePassword(adminId,password), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/delete")
-	public void deleteAdmin(@RequestParam Integer adminId){ adminService.deleteAdmin(adminId);
+	public void deleteAdmin(@RequestParam Integer adminId) {adminService.deleteAdmin(adminId);
 	}
 
 	@GetMapping("/listOfCustomers")

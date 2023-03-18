@@ -7,7 +7,7 @@ public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
-    public int perkmRate;
+    public int perKmRate;
     public boolean available;
     @OneToOne
     @JoinColumn Driver driver;
@@ -20,12 +20,12 @@ public class Cab {
         this.id = id;
     }
 
-    public int getPerkmRate() {
-        return perkmRate;
+    public int getPerKmRate() {
+        return perKmRate;
     }
 
-    public void setPerkmRate(int perkmRate) {
-        this.perkmRate = perkmRate;
+    public void setPerKmRate(int perKmRate) {
+        this.perKmRate = perKmRate;
     }
 
     public boolean getAvailable() {

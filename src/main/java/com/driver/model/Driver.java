@@ -3,10 +3,8 @@ import javax.persistence.*;
 import java.util.*;
 @Entity
 public class Driver {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     public int driverId;
-
     public String mobile;
     public String password;
 
